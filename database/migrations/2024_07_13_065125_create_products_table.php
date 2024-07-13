@@ -21,7 +21,7 @@ return new class extends Migration
             $table->longText('description')->nullable();
             $table->decimal('price' , 10 , 2);
             $table->foreignIdFor(User::class , 'created_by')->nullable();
-            $table->foreignIdFor(User::class , 'created_by')->nullable();
+            $table->foreignIdFor(User::class , 'updated_by')->nullable();
             $table->softDeletes();
             $table->foreignIdFor(User::class , 'deleted_by')->nullable();
             $table->timestamps();
